@@ -19,4 +19,9 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      
+      name: Deploy to GH Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: build
+          token: ${{ secrets.GH_AUTH_TOKEN }}
