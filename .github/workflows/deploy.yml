@@ -1,0 +1,22 @@
+name: Build and Publish to GH pages
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    type: [opened, synchronize, reopened, ready_for_review]
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      
