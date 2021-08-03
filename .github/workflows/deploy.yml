@@ -3,12 +3,12 @@ name: Build and Publish to GH pages
 on:
   push:
     branches:
-      - master
+      - main
 
   pull_request:
     type: [opened, synchronize, reopened, ready_for_review]
     branches:
-      - master
+      - main
 
 jobs:
   build:
